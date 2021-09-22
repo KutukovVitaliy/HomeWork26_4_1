@@ -9,10 +9,18 @@
 
 class Player {
     std::vector<Track> tracks;
-    std::vector<Track> currentTrack;
+    int currentTrack = -1;
+    int findTrackByName(std::string strName);
+    int generateTrackNumber();
+    void playTrack(int trackNumber);
+    void getTrackInfo(int number);
 public:
     Player();
-    void getTrackName();
+    void getAllTrackInfo();
+    void play();
+    void pause();
+    void stop();
+    void next();
 };
 
 
