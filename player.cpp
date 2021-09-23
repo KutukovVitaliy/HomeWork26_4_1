@@ -5,6 +5,7 @@
 #include "player.h"
 #include <iostream>
 #include <iomanip>
+#include <string>
 
 Player::Player() {
     Track initTrack;
@@ -77,12 +78,9 @@ void Player::next(){
         getTrackInfo(currentTrack);
     }
 }
-void Player::play(){
+void Player::play(std::string trackName){
     if(currentTrack == -1){
-        std::string tmpStr;
-        std::cout << "Enter track name: ";
-        std::getline(std::cin, tmpStr);
-        currentTrack = findTrackByName(tmpStr);
+        currentTrack = findTrackByName(trackName);
         if(currentTrack != -1){
             getTrackInfo(currentTrack);
         }

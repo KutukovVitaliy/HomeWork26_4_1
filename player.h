@@ -17,7 +17,7 @@ class Player {
 public:
     Player();
     void getAllTrackInfo();
-    void play();
+    void play(std::string trackName);
     void pause();
     void stop();
     void next();
